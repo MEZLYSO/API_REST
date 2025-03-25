@@ -1,5 +1,6 @@
 const express = require("express");
 const route = express.Router();
+const route2 = express.Router();
 const userController = require("../controllers/userController.js");
 
 route
@@ -9,4 +10,6 @@ route
   .put(userController.update)
   .delete(userController.delete);
 
-module.exports = route;
+module.exports = {
+  route,
+};
